@@ -3,6 +3,7 @@ import styled from 'styled-components/native';
 export const Container = styled.SafeAreaView`
   flex: 0;
   background: rgba(246,131,68,1);
+
 `;
 
 export const WrapperUser = styled.View`
@@ -35,10 +36,11 @@ export const UserAvatar = styled.Image`
 `;
 
 export const InputSeach = styled.TextInput`
-  padding: 20px;
+  padding: 10px;
   border-radius: 20px;
   margin: -60px 10px 20px 10px;
   background: rgba(249, 155, 104, 100);
+  font-size: 16px;
 
   box-shadow: 0 0 10px #00000029;
 `;

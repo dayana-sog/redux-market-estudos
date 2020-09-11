@@ -1,4 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
+import { useDispatch } from 'react-redux';
+
+import * as CartActions from '../../store/modules/cart/actions';
 
 import HeaderHome from '../../components/HeaderHome';
 
@@ -27,7 +30,9 @@ import {
 
 const Home = () => {
   const [products, setProducts] = useState([]);
-  const [sizes, setSizes] = useState();
+  // const [sizes, setSizes] = useState();
+
+  const dispatch = useDispatch();
 
   const items = [
     {
@@ -62,6 +67,12 @@ const Home = () => {
     })()
   }, []);
 
+  const handleAddProductToCart = useCallback((product) => {
+    const { addToCartSuccess } = CartActions;
+
+    dispatch(addToCartSuccess(product));
+  }, []);
+
   return (
     <>
       <HeaderHome />
@@ -80,7 +91,10 @@ const Home = () => {
         </WrapCathegory>
 
         {products.map(product => (
-          <Products key={product.name}>
+          <Products 
+            key={product.name}
+            onPress={() => handleAddProductToCart(product)}
+          >
               <ImgProduct source={{ uri: product.image }} />
 
               <ProductsInformations>

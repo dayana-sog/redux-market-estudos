@@ -821,5 +821,76 @@
         }
       ]
     }
+  ],
+
+  "stock": [
+    {
+      "id": 1,
+      "quatity": 4
+    },
+    {
+      "id": 2,
+      "quatity": 7
+    },{
+      "id": 3,
+      "quatity": 1
+    },{
+      "id": 4,
+      "quatity": 4
+    },{
+      "id": 5,
+      "quatity": 4
+    },{
+      "id": 6,
+      "quatity": 4
+    },{
+      "id": 7,
+      "quatity": 4
+    },{
+      "id": 8,
+      "quatity": 4
+    },{
+      "id": 9,
+      "quatity": 6
+    },{
+      "id": 10,
+      "quatity": 4
+    },{
+      "id": 11,
+      "quatity": 3
+    },{
+      "id": 12,
+      "quatity": 4
+    },{
+      "id": 13,
+      "quatity": 5
+    },{
+      "id": 14,
+      "quatity": 8
+    },{
+      "id": 15,
+      "quatity": 5
+    },{
+      "id": 16,
+      "quatity": 2
+    },{
+      "id": 17,
+      "quatity": 7
+    },{
+      "id": 18,
+      "quatity": 6
+    },{
+      "id": 19,
+      "quatity": 1
+    },{
+      "id": 20,
+      "quatity": 5
+    },{
+      "id": 21,
+      "quatity": 3
+    },{
+      "id": 22,
+      "quatity": 5
+    }
   ]
 }

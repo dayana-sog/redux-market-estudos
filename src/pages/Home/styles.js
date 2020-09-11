@@ -5,19 +5,16 @@ export const Container = styled.ScrollView.attrs(() => ({
   showsVerticalScrollIndicator: false,
 }))`
   margin: 225px 20px 0 30px;
-   
 `;
 
 export const Title = styled.Text`
   font-size: 16px;
   font-weight: bold;
-
 `;
 
 export const WrapCathegory = styled.View`
   margin-top: 20px;
   flex-direction: row;
-  
 `;
 
 export const Banners = styled.TouchableOpacity`
@@ -42,7 +39,7 @@ export const TitleBanner = styled.Text`
   text-align: center;
 `;
 
-export const Products = styled.View`
+export const Products = styled.TouchableOpacity`
   background: #fff;
   margin: 20px 10px 0 0;
   border-radius: 8px;
