@@ -68,9 +68,9 @@ const Home = () => {
   }, []);
 
   const handleAddProductToCart = useCallback((product) => {
-    const { addToCartSuccess } = CartActions;
+    const { addToCartRequest } = CartActions;
 
-    dispatch(addToCartSuccess(product));
+    dispatch(addToCartRequest(product));
   }, []);
 
   return (

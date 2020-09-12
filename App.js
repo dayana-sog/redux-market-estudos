@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 
-// import './src/config/ReactotronConfig';
+import './src/config/ReactotronConfig';
 
 import store from './src/store/index';
 

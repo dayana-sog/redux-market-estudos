@@ -38,7 +38,7 @@ export const UserAvatar = styled.Image`
 export const InputSeach = styled.TextInput`
   padding: 10px;
   border-radius: 20px;
-  margin: -60px 10px 20px 10px;
+  margin: -60px 30px 20px 30px;
   background: rgba(249, 155, 104, 100);
   font-size: 16px;
 

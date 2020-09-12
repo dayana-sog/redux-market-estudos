@@ -2,13 +2,12 @@ import produce from 'immer';
 
 
 export default function cart(state = [], action) {
-  console.log(state);
   switch (action.type) {
     case '@cart/ADD_SUCCESS':
       return produce(state, (draft) => {
 
-        const { item } = action;
-
+        const { item } = action;  
+        
         draft.push(item);
       });
 

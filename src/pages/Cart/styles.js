@@ -1,31 +1,15 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.SafeAreaView`
-  flex: 1;
-  background: rgba(246,131,68,1);
-`;
+export const Container = styled.View``;
 
-export const HeaderCart = styled.Text`
-  background: rgba(246,131,68,1);
-  height: 150px;
-  width: 100%;
-
-  text-align: center;
-  box-shadow: 0px 2px 4px #00000029;
-`
-
-export const WrapProducts = styled.ScrollView.attrs(() => ({
+export const ContainerProducts = styled.ScrollView.attrs(() => ({
   horizontal: false,
   showsVerticalScrollIndicator: false,
 }))`
-  background: #fff;
-`;
-
-export const ContainerProducts = styled.View`
   padding: 10px;
   background: #fff;
   border-radius: 4px;
-  margin: 15px;
+  margin-top: 130px;
 `;
 
 export const Product = styled.View`

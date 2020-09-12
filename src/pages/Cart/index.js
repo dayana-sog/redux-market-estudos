@@ -3,10 +3,10 @@ import { useSelector } from 'react-redux';
 
 import { Feather } from '@expo/vector-icons';
 
+import HeaderCart from '../../components/HeaderCart';
+
 import {
   Container,
-  HeaderCart,
-  WrapProducts,
   ContainerProducts,
   Product,
   ProductInfo,
@@ -22,7 +22,7 @@ import {
 } from './styles';
 
 const Cart = () => {
-  const cart = useSelector(state => state);
+  const cart = useSelector(state => state.cart);
 
   console.log('Dentro de cart', cart);
 
@@ -36,11 +36,10 @@ const Cart = () => {
 
   return (
     <Container>
-      <HeaderCart>Shopping Cart</HeaderCart>
+      <HeaderCart />
 
-      <WrapProducts>
         <ContainerProducts>
-          {cart.cart.map((product) => (
+          {cart.map((product) => (
             <Product key={product.id}>
               <ProductInfo>
                 <ProductImage source={{ uri: product.image }} />
@@ -56,7 +55,7 @@ const Cart = () => {
                 <ProductControlButton onPress={() => decrement(product)}>
                   <Feather name="minus-circle" size={20} color="#454777" />
                 </ProductControlButton>
-                <ProductAmount value={String(product.amount)} />
+                <ProductAmount value={String(1)} />
                 <ProductControlButton onPress={() => increment(product)}>
                   <Feather name="plus-circle" size={20} color="#454777" />
                 </ProductControlButton>
@@ -65,8 +64,6 @@ const Cart = () => {
             </Product>
           ))}
         </ContainerProducts>
-
-      </WrapProducts> 
     </Container>
   );
 };
