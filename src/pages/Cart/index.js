@@ -24,7 +24,7 @@ import {
 const Cart = () => {
   const cart = useSelector(state => state.cart);
 
-  console.log('Dentro de cart', cart);
+  console.tron.log('Dentro de cart', cart);
 
   const increment = useCallback((product) => {
     updateAmountRequest(product.id, product.amount + 1);
@@ -55,7 +55,7 @@ const Cart = () => {
                 <ProductControlButton onPress={() => decrement(product)}>
                   <Feather name="minus-circle" size={20} color="#454777" />
                 </ProductControlButton>
-                <ProductAmount value={String(1)} />
+                <ProductAmount value={String(product.amount)} />
                 <ProductControlButton onPress={() => increment(product)}>
                   <Feather name="plus-circle" size={20} color="#454777" />
                 </ProductControlButton>

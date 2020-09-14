@@ -93,7 +93,7 @@ const Home = () => {
         {products.map(product => (
           <Products 
             key={product.name}
-            onPress={() => handleAddProductToCart(product)}
+            onPress={() => handleAddProductToCart(product.id)}
           >
               <ImgProduct source={{ uri: product.image }} />
 
