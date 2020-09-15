@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 // import { AntDesign } from '@expo/vector-icons';
 
 import avatar from '../../assets/person.png';
@@ -12,6 +12,11 @@ import {
 } from './styles';
 
 const HeaderHome = () => {
+
+  function setSQuery(e) {
+    console.tron.log(e);
+  }
+
   return (
     <Container>
       <WrapperUser>
@@ -21,7 +26,10 @@ const HeaderHome = () => {
         <UserAvatar source={avatar} resizeMode="contain" />
       </WrapperUser>
 
-      <InputSeach placeholder="Buscar produtos" />
+      <InputSeach 
+        placeholder="Buscar produtos" 
+        // onChange={e => setSQuery(e.target.value)}
+      />
     </Container>
   );
 };

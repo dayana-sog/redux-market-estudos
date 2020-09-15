@@ -69,3 +69,51 @@ export const ProductSubtotal = styled.Text`
   flex: 1;
   text-align: right;
 `;
+
+export const TotalContainer = styled.View`
+  margin-top: 30px;
+`;
+export const TotalText = styled.Text`
+  text-align: center;
+  color: #999;
+  font-weight: bold;
+`;
+export const TotalAmount = styled.Text`
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: bold;
+`;
+export const Order = styled.TouchableOpacity`
+  background: rgba(246,131,68,1);
+  padding: 12px;
+  border-radius: 20px;
+  box-shadow: 0px 2px 4px #00000029;
+  width: 50%;
+  align-self: center;
+
+  margin-bottom: 80px;
+`;
+
+export const OrderText = styled.Text`
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+`;
+
+export const EmptyContainer = styled.View`
+  margin-top: 120px;
+  align-items: center;
+  justify-content: flex-end;
+  height: 380px;
+  width: 380px;
+`;
+
+export const EmptyText = styled.Text`
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #454777;
+`;

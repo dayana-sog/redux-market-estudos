@@ -40,7 +40,8 @@ function* updateAmount({ id, amount }) {
   if (amount <= 0) return;
 
   const stock = yield call(api.get, `stock/${id}`);
-  const stockAmount = stock.data.amount;
+
+  const stockAmount = stock.data.quatity;
 
   if (amount > stockAmount) {
     Alert.alert('Quantidade indisponível em estoque');

@@ -1,6 +1,9 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { AntDesign, Feather } from '@expo/vector-icons';
+import { withBadge, Icon } from 'react-native-elements';
+
+import { useSelector } from 'react-redux';
 
 import HomeScreen from '../../pages/Home';
 import CartScreen from '../../pages/Cart';
@@ -36,12 +39,20 @@ const icons = {
 };
 
 const BottomTabNav = () => {
+  const cartSize = useSelector(state => state.cart.length);
+  const Badge = withBadge(cartSize)(Icon);
+
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
         tabBarIcon: ({ color, size }) => {
 
           const { lib: Icon, name } = icons[route.name];
+
+          if (name === 'shoppingcart' && cartSize !== 0) {
+            return <Badge type="ionicon" color={color} name="md-cart" size={24} />
+          }
+
           return <Icon name={name} size={size} color={color} />;
         },
       })}
