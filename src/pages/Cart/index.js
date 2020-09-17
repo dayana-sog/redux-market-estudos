@@ -54,8 +54,6 @@ const Cart = () => {
       * product.amount;
   }, 0);
 
-  console.tron.log('teste', total);
-
   const increment = useCallback((product) => {
     dispatch(updateAmountRequest(product.id, product.amount + 1));
   }, []);

@@ -30,6 +30,7 @@ import {
 
 const Home = () => {
   const [products, setProducts] = useState([]);
+  const [search, setSearch] = useState(false);
   // const [sizes, setSizes] = useState();
 
   const dispatch = useDispatch();
@@ -75,7 +76,7 @@ const Home = () => {
 
   return (
     <>
-      <HeaderHome />
+      <HeaderHome products={products} />
 
       <Container>
         <Title>Categoria</Title>
@@ -94,6 +95,7 @@ const Home = () => {
           <Products 
             key={product.name}
             onPress={() => handleAddProductToCart(product.id)}
+            viewabilityConfig={{viewAreaCoveragePercentThreshold: 20}}
           >
               <ImgProduct source={{ uri: product.image }} />
 

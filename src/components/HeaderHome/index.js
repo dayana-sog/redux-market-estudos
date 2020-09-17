@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 // import { AntDesign } from '@expo/vector-icons';
 
 import avatar from '../../assets/person.png';
@@ -11,11 +11,19 @@ import {
   InputSeach
 } from './styles';
 
-const HeaderHome = () => {
+function HeaderHome ({ products }) {
+  const [query, setSQuery] = useState('');
 
-  function setSQuery(e) {
-    console.tron.log(e);
+  const FilteredProducts = products.filter(product => {
+    return product.name.toLowerCase().includes(query.toLowerCase());
+  });
+
+  if (FilteredProducts !== '') {
+
+    console.tron.log(FilteredProducts);
   }
+
+
 
   return (
     <Container>
@@ -28,7 +36,7 @@ const HeaderHome = () => {
 
       <InputSeach 
         placeholder="Buscar produtos" 
-        // onChange={e => setSQuery(e.target.value)}
+        onChangeText={(e) => setSQuery(e)}
       />
     </Container>
   );
